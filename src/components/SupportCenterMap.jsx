@@ -155,7 +155,7 @@ function SupportCenterMap() {
               clickable={true}
               icon={{
                 content:
-                  '<img src="/src/assets/current_location_icon.png" alt="" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; max-width: none; max-height: none; -webkit-user-select: none; position: absolute; width: 40px; height: 40px; left: 0px; top: 0px;">',
+                  '<img src="/assets/current_location_icon.png" alt="" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; max-width: none; max-height: none; -webkit-user-select: none; position: absolute; width: 40px; height: 40px; left: 0px; top: 0px;">',
                 size: new navermaps.Size(24, 24),
                 origin: new navermaps.Point(0, 0),
                 anchor: new navermaps.Point(12, 12),
@@ -170,7 +170,7 @@ function SupportCenterMap() {
               clickable={true}
               icon={{
                 content:
-                  '<img src="/src/assets/support_center_icon.png" alt="" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; max-width: none; max-height: none; -webkit-user-select: none; position: absolute; width: 40px; height: 40px; left: 0px; top: 0px;">',
+                  '<img src="/assets/supportCenterIcon.png" alt="" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; max-width: none; max-height: none; -webkit-user-select: none; position: absolute; width: 40px; height: 40px; left: 0px; top: 0px;">',
                 size: new navermaps.Size(24, 24),
                 origin: new navermaps.Point(0, 0),
                 anchor: new navermaps.Point(12, 12),
