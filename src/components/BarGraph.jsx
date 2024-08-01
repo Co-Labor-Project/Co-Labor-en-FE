@@ -1,10 +1,9 @@
-// components/BarGraph.jsx
-import React from "react";
-import styled from "styled-components";
-import useBarGraph from "../hooks/useBarGraph";
+import React from 'react';
+import styled from 'styled-components';
+import useBarGraph from '../hooks/useBarGraph';
 
 const BarGraph = ({ rating }) => {
-  const Bar_IDX_ARR = ["first", "second", "third", "fourth", "last"];
+  const Bar_IDX_ARR = ['first', 'second', 'third', 'fourth', 'last'];
   const ratesResArr = useBarGraph(rating);
 
   return (

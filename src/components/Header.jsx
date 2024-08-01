@@ -75,7 +75,17 @@ const Header = () => {
           onClick={searchHandler}
         />
       </div>
+
       <div className="right-child">
+        <button
+          className="langaugeContainer"
+          onClick={() => {
+            location.href = 'http://colabor.site';
+          }}
+        >
+          <img src="/src/assets/icon8.png" alt="" width="36px" height="36px" />
+          Korean
+        </button>
         {loginState.userEnterprise && (
           <div className="jobNoticeApply" onClick={handleJobNoticeApply}>
             Post a Job

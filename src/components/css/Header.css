@@ -68,8 +68,8 @@
 }
 
 .enterpriseApply {
-  color: #ff5d5d;
-  border: 2px solid #ff5d5d;
+  color: rgb(248, 61, 61);
+  border: 2px solid rgb(248, 61, 61);
   padding: 8px;
   border-radius: 15px;
   height: 55px;
@@ -87,4 +87,34 @@
   display: flex;
   align-items: center;
   font-weight: bold;
+}
+
+.langaugeContainer {
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  border: 2.5px dotted #2c88f8;
+  background-color: #ffffff;
+  gap: 10px;
+  font-size: 12px;
+  padding: 0px 6px;
+}
+
+@keyframes opacityLangauge {
+  0% {
+    background-color: #ffffff;
+    color: black;
+  }
+  50% {
+    background-color: #2c88f8;
+    color: white;
+  }
+  100% {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+.langaugeContainer:hover {
+  animation: opacityLangauge 3s infinite;
 }
