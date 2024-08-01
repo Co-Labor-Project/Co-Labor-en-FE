@@ -96,8 +96,9 @@
   border: 2.5px dotted #2c88f8;
   background-color: #ffffff;
   gap: 10px;
-  font-size: 12px;
-  padding: 0px 6px;
+  font-size: 16px;
+  padding: 4px 10px;
+  height: 36px;
 }
 
 @keyframes opacityLangauge {

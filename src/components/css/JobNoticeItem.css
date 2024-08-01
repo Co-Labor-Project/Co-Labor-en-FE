@@ -7,7 +7,7 @@
   border: 0px solid #58c179;
   cursor: pointer;
   max-width: 280px;
-  height: 350px;
+  height: 400px;
 }
 .JobNotieItem:hover {
   border: 3px solid #58c179;
@@ -27,7 +27,7 @@
 
 .jobNotice_infoTitle {
   margin-top: 3px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 

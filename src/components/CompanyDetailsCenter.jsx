@@ -134,13 +134,13 @@ const CompanyDetailsCenter = () => {
               {companyData.address3}
             </div>
             <div className="CompanyDetailsCenterCompanyPh">
-              Phone Number: {companyData.phone_number}
+              Number: {companyData.phone_number}
             </div>
             <div className="CompanyDetailsCenterCompanyType">
-              Company Category: {displayCompanyType}
+              Category: {displayCompanyType}
             </div>
             <div className="CompanyDetailsCenterCompanyDes">
-              Company Description:{displayCompanyDescription}
+              Description:{displayCompanyDescription}
             </div>
           </div>
         </div>

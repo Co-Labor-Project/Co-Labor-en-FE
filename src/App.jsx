@@ -34,7 +34,7 @@ function App() {
   const [isEnroll, setIsEnroll] = useState(false);
 
   useEffect(() => {
-    fetch('http://3.36.90.4:8080/api/enterprises')
+    fetch('http://3.36.90.4:8080/api/enterprises/eng')
       .then((response) => response.json())
       .then((data) => {
         setCompanies(data);
@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('http://3.36.90.4:8080/api/jobs')
+    fetch('http://3.36.90.4:8080/api/jobs/eng')
       .then((response) => response.json())
       .then((data) => {
         setJobs(data);

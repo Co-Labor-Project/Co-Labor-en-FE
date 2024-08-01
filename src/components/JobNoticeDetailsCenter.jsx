@@ -122,20 +122,20 @@ const JobNoticeDetailsCenter = () => {
           />
           <div className="JobNDetailsCondi">
             <div className="JobDetailKey">
-              <p>address </p>{' '}
+              <p>Address </p>{' '}
               <span>
                 {companyData.address1} {companyData.address2}{' '}
                 {companyData.address3}
               </span>
             </div>
             <div className="JobDetailKey">
-              <p>Phone Number</p> <span>{companyData.phone_number}</span>
+              <p>Number</p> <span>{companyData.phone_number}</span>
             </div>
             <div className="JobDetailKey">
-              <p>Company Category </p> <span>{displayCompanyType}</span>
+              <p>Category </p> <span>{displayCompanyType}</span>
             </div>
             <div className="JobDetailKey">
-              <p>Company Description </p>
+              <p>Description </p>
               <span>{displayCompanyDescription}</span>
             </div>
           </div>
@@ -166,10 +166,10 @@ const JobNoticeDetailsCenter = () => {
             <span>{jobData.experience}</span>
           </div>
           <div className="JobDetailKey">
-            <p>Employment type </p> <span>{jobData.employmentType}</span>
+            <p>type </p> <span>{jobData.employmentType}</span>
           </div>
           <div className="JobDetailKey">
-            <p>Working area </p>
+            <p>location </p>
             <span>{jobData.location}</span>
           </div>
           <div className="JobDetailKey">

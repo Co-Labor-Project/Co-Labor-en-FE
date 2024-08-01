@@ -16,7 +16,7 @@ const IegalAdviceCenter = () => {
       setUsername(storedUsername);
     } else {
       navigate('/SingIn');
-      alert('You need to be logged in to use this feature.');
+      alert('이 기능을 사용하려면 로그인이 필요합니다.');
     }
   }, [navigate]);
 
@@ -42,7 +42,7 @@ const IegalAdviceCenter = () => {
       })
       .catch((error) => {
         console.error('Error fetching messages:', error);
-        alert('Failed to retrieve the message. Please try again.');
+        alert('메시지를 불러오지 못했습니다. 다시 시도해 주세요.');
       })
       .finally(() => {
         setLoading(false);
@@ -81,7 +81,7 @@ const IegalAdviceCenter = () => {
       })
       .catch((error) => {
         console.error('Error sending message:', error);
-        alert('Failed to send the message. Please try again.');
+        alert('메시지를 전송하지 못했습니다. 다시 시도해 주세요.');
       })
       .finally(() => {
         setIsSending(false); // 응답을 받으면 로딩 상태 해제
@@ -115,7 +115,7 @@ const MessageList = ({ messages, loading, isSending }) => (
     {loading ? (
       <div className="LoadingWrapper">
         <div className="loading-spinner"></div>
-        <p>🤖 Loading previous chat history...</p>
+        <p>🤖 이전 채팅 기록을 불러오는 중 입니다...</p>
       </div>
     ) : (
       <>
@@ -127,7 +127,7 @@ const MessageList = ({ messages, loading, isSending }) => (
           <div className="LoadingWrapper">
             <div className="loading-spinner"></div>
 
-            <p>🤖 Generating an answer...</p>
+            <p>🤖 답변을 생성 중 입니다...</p>
           </div>
         )}
       </>
@@ -138,10 +138,14 @@ const MessageList = ({ messages, loading, isSending }) => (
 // 메시지 컴포넌트
 const Message = ({ text, isUser }) => {
   return (
-    <div className={isUser ? 'user-message' : 'ai-message'}>
-      <p>
-        <b>{isUser ? '' : 'Co Labor :'}</b> {text}
-      </p>
+    <div>
+      <div className={isUser ? 'user-message' : 'ai-message'}>
+        <b className="messageWrapper">{isUser ? '' : 'Co Labor :'}</b>
+        <div
+          className="messageWrapper2"
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
+      </div>
     </div>
   );
 };

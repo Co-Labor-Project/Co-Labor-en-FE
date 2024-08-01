@@ -26,17 +26,50 @@
   flex-grow: 1;
   overflow-y: auto;
 }
+/* 
+.user-message,
+.ai-message {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 4px;
+}
+
+.ai-message {
+  max-width: 70%;
+}
+
+.user-message {
+  max-width: 40%;
+}
+
+.ai-message > .messageWrapper {
+  width: 380px;
+} */
 
 .user-message,
 .ai-message {
   margin-bottom: 20px;
-  max-width: 60%;
   display: flex;
+  gap: 4px;
 }
+
+.ai-message {
+  max-width: 70%;
+}
+
+.ai-message > .messageWrapper {
+  flex: 1;
+}
+.ai-message > .messageWrapper2 {
+  flex: 5;
+}
+/* .ai-message > .messageWrapper2 {
+  width: 1500px;
+} */
 
 .user-message {
   align-self: flex-end;
-  /* background: #2979ff; */
+  max-width: 40%;
   background-color: var(--primary-color);
   color: #fff;
   padding: 10px 15px;
