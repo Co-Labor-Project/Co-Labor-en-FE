@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { CompanyContext, JobContext, ReviewContext } from "../App";
-import "./css/CompanyDetailsCenter.css";
-import StarRate from "./StarRate";
-import BarGraph from "./BarGraph";
-import RadarChart from "./RadarChart";
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { CompanyContext, JobContext, ReviewContext } from '../App';
+import './css/CompanyDetailsCenter.css';
+import StarRate from './StarRate';
+import BarGraph from './BarGraph';
+import RadarChart from './RadarChart';
 
 const CompanyDetailsCenter = () => {
   const params = useParams();
@@ -55,23 +55,23 @@ const CompanyDetailsCenter = () => {
   }
 
   const defaultCompanyimageName =
-    "https://cdn-icons-png.flaticon.com/512/4091/4091968.png";
+    'https://cdn-icons-png.flaticon.com/512/4091/4091968.png';
   const displayCompanyimageName = companyData.imageName
-    ? "http://3.36.90.4:8080/static/images/" + companyData.imageName
+    ? 'http://3.36.90.4:8080/static/images/' + companyData.imageName
     : defaultCompanyimageName;
 
-  const defaultCompanyType = "기업 분류를 작성해주세요!";
+  const defaultCompanyType = 'Please categorize the companies!';
   const displayCompanyType = companyData.type || defaultCompanyType;
 
-  const defaultCompanyDescription = "기업 설명을 작성해주세요!";
+  const defaultCompanyDescription = 'Please provide a company description!';
   const displayCompanyDescription =
     companyData.description || defaultCompanyDescription;
 
   const defaultJobimageName =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Gn8yBWZsQEVzdXIx-qFWrYYlphEWWnG4Og&s";
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Gn8yBWZsQEVzdXIx-qFWrYYlphEWWnG4Og&s';
   const displayJobimageName = (job) =>
     job.imageName
-      ? "http://3.36.90.4:8080/static/images/" + job.imageName
+      ? 'http://3.36.90.4:8080/static/images/' + job.imageName
       : defaultJobimageName;
 
   // 리뷰 각 평점의 평균을 계산하는 함수
@@ -120,7 +120,7 @@ const CompanyDetailsCenter = () => {
       <br />
       <br />
       <div className="CompanyDetailsCenterCompany">
-        <h1 className="title">{companyData.name} 기본 정보</h1>
+        <h1 className="title">{companyData.name} Basic Information</h1>
         <div className="gap"></div>
         <div className="CompanyDetailsCenterCompanyBasicInfo">
           <img
@@ -130,17 +130,17 @@ const CompanyDetailsCenter = () => {
           />
           <div className="CompanyDetailsCenterCompanyText">
             <div className="CompanyDetailsCenterCompanyAddress">
-              주소: {companyData.address1} {companyData.address2}{" "}
+              Address: {companyData.address1} {companyData.address2}{' '}
               {companyData.address3}
             </div>
             <div className="CompanyDetailsCenterCompanyPh">
-              전화번호: {companyData.phone_number}
+              Phone Number: {companyData.phone_number}
             </div>
             <div className="CompanyDetailsCenterCompanyType">
-              기업 분류: {displayCompanyType}
+              Company Category: {displayCompanyType}
             </div>
             <div className="CompanyDetailsCenterCompanyDes">
-              기업 설명: {displayCompanyDescription}
+              Company Description:{displayCompanyDescription}
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ const CompanyDetailsCenter = () => {
       <div className="gap2"></div>
 
       <div className="CompanyDetailsCenterJob">
-        <h1 className="title">{companyData.name} 채용 공고</h1>
+        <h1 className="title">{companyData.name} Job Postings</h1>
         <div className="gap2"></div>
         <div className="CompanyDetailsCenterJobList">
           {jobData.length > 0 ? (
@@ -180,25 +180,25 @@ const CompanyDetailsCenter = () => {
                           alt={job.title}
                         />
                         <div className="CompanyDetailsCenterjobNotice_infoCondi">
-                          마감일 : {job.deadDate}
+                          Deadline :{job.deadDate}
                         </div>
                         <div className="CompanyDetailsCenterjobNotice_infoCondi">
-                          제약 조건 : {job.requirement}
+                          Requirements : {job.requirement}
                         </div>
                         <div className="CompanyDetailsCenterjobNotice_infoCondi">
-                          직무 : {job.jobRole}
+                          Position : {job.jobRole}
                         </div>
                         <div className="CompanyDetailsCenterjobNotice_infoCondi">
-                          경력 : {job.experience}
+                          Experience : {job.experience}
                         </div>
                         <div className="CompanyDetailsCenterjobNotice_infoCondi">
-                          고용형태 : {job.employmentType}
+                          Employment Type : {job.employmentType}
                         </div>
                         <div className="CompanyDetailsCenterjobNotice_infoCondi">
-                          근무지역 : {job.location}
+                          Location : {job.location}
                         </div>
                         <div className="CompanyDetailsCenterjobNotice_infoCondi">
-                          스킬 : {job.skills}
+                          Skills : {job.skills}
                         </div>
                       </div>
                     </div>
@@ -208,46 +208,46 @@ const CompanyDetailsCenter = () => {
             </Swiper>
           ) : (
             <div className="CompanyDetailsCenterjobNotice_infoTitle">
-              등록된 채용 공고가 없습니다.
+              No job postings available.
             </div>
           )}
         </div>
       </div>
       <div className="gap2" />
 
-      <h1 className="title">{companyData.name} 전체 리뷰 통계</h1>
+      <h1 className="title">{companyData.name} Overall Review Statistics</h1>
       <div className="gap" />
 
       <div className="CompanyDetailsCenterAllReview">
         <div className="CompanyDetailsCenterAllReviewitemWrapper">
-          <div style={{ marginTop: "10px" }}>
-            <span>{totalReviews}개의 리뷰</span>
+          <div style={{ marginTop: '10px' }}>
+            <span>{totalReviews}reviews</span>
             <StarRate rating={averageRatings.averageTotal} />
             <br />
             <br />
           </div>
           <div>
-            <span>승진 기회 및 개인 성장 가능성: </span>
+            <span>Promotion Opportunities and Personal Growth Potential: </span>
             <BarGraph rating={averageRatings.averagePromotion} />
             <br />
           </div>
           <div>
-            <span>복지 및 급여: </span>
+            <span>Benefits and Salary: </span>
             <BarGraph rating={averageRatings.averageSalary} />
             <br />
           </div>
           <div>
-            <span>업무와 삶의 균형: </span>
+            <span>Work-Life Balance: </span>
             <BarGraph rating={averageRatings.averageBalance} />
             <br />
           </div>
           <div>
-            <span>사내 문화 평가 점수: </span>
+            <span>Company Culture Rating: </span>
             <BarGraph rating={averageRatings.averageCulture} />
             <br />
           </div>
           <div>
-            <span>경영진 관련 평가 점수: </span>
+            <span>Management Rating: </span>
             <BarGraph rating={averageRatings.averageManagement} />
             <br />
           </div>
@@ -258,7 +258,7 @@ const CompanyDetailsCenter = () => {
       </div>
 
       <div className="CompanyDetailsCenterReview">
-        <h1 className="title">{companyData.name} 리뷰</h1>
+        <h1 className="title">{companyData.name} Review</h1>
         <div className="gap" />
         <div className="CompanyDetailsCenterReviewList">
           {reviewData.length > 0 ? (
@@ -268,22 +268,24 @@ const CompanyDetailsCenter = () => {
                   <h5>{review.title}</h5>
                   <div className="CompanyDetailsCenterReviewInfo">
                     <div>
-                      {review.created_at} 작성자 : {review.laborUser.name}
+                      {review.created_at}Author : {review.laborUser.name}
                     </div>
                     <StarRate rating={review.rating} />
-                    <div>승진 기회 및 개인 성장 가능성</div>
+                    <div>
+                      Promotion Opportunities and Personal Growth Potential
+                    </div>
                     <BarGraph rating={review.promotion_rating} />
-                    <div>복지 및 급여</div>
+                    <div>Benefits and Salary</div>
                     <BarGraph rating={review.salary_rating} />
-                    <div>업무와 삶의 균형</div>
+                    <div>Work-Life Balance</div>
                     <BarGraph rating={review.balance_rating} />
-                    <div>사내 문화 평가 점수</div>
+                    <div>Company Culture Rating</div>
                     <BarGraph rating={review.culture_rating} />
-                    <div>경영진 관련 평가 점수</div>
+                    <div>Management Rating</div>
                     <BarGraph rating={review.management_rating} />
-                    <div>장점</div>
+                    <div>Pros</div>
                     <div>{review.pros}</div>
-                    <div>단점</div>
+                    <div>Cons</div>
                     <div>{review.cons}</div>
                   </div>
                 </div>
@@ -291,7 +293,7 @@ const CompanyDetailsCenter = () => {
             ))
           ) : (
             <div className="CompanyDetailsCenterjobNotice_infoTitle">
-              등록된 리뷰가 없습니다.
+              No reviews available.
             </div>
           )}
         </div>

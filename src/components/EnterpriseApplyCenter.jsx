@@ -16,7 +16,7 @@ const EnterpriseApplyCenter = () => {
       setUsername(storedUsername);
     } else {
       nav('/SingIn');
-      alert('이 기능을 사용하려면 로그인이 필요합니다.');
+      alert('You need to log in to use this feature.');
     }
   }, [nav]);
 
@@ -53,7 +53,7 @@ const EnterpriseApplyCenter = () => {
   };
 
   const onSubmit = (json) => {
-    console.log('현재 입력창 상태', input);
+    console.log('Current Input Field Status', input);
     fetch('http://3.36.90.4:8080/api/enterprises/queue', {
       method: 'POST',
       headers: {
@@ -64,12 +64,12 @@ const EnterpriseApplyCenter = () => {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log('기업등록결과: ', result);
-        if (!alert('기업등록 성공!')) nav('/');
+        console.log('Company Registration Result: ', result);
+        if (!alert('Company Registration Successful!')) nav('/');
       })
       .catch((error) => {
         console.error('Error:', error);
-        alert('회원가입 실패!');
+        alert('Sign-Up Failed!');
       });
   };
 
@@ -112,7 +112,7 @@ const EnterpriseApplyCenter = () => {
       console.log(result2);
 
       if (result2.status === 1) {
-        console.log('실제 존재하는 사업자 번호');
+        console.log('This member has already registered a company.');
         console.log(sessionStorage.getItem('username'));
 
         const response3 = await fetch(
@@ -129,13 +129,13 @@ const EnterpriseApplyCenter = () => {
         console.log(result3);
 
         if (result3.status === 1) {
-          alert('기업 등록이 완료되었습니다!');
+          alert('Company registration completed!');
           nav('/');
         } else {
           toggle();
         }
       } else {
-        alert('존재하지 않는 사업자 번호입니다.');
+        alert('Non-existent Business Registration Number');
       }
     }
   };
@@ -245,7 +245,7 @@ const EnterpriseApplyCenter = () => {
                     onChange={onChangeInput}
                   />
                 </div>
-                <button onClick={onSubmit}>기업 등록하기</button>
+                <button onClick={onSubmit}>Register a Company</button>
                 {/* <p>
                   <span>Already have an account?</span>
                   <b onClick={toggle} className="pointer">
@@ -276,17 +276,8 @@ const EnterpriseApplyCenter = () => {
                   />
                 </div>
                 <button type="submit" onClick={onCheckRegiNum}>
-                  사업자 번호 인증받기
+                  Verify Business Registration Number
                 </button>
-                {/* <p>
-                  <b>Forgot password?</b>
-                </p>
-                <p>
-                  <span>Don&apos;t have an account?</span>
-                  <b onClick={toggle} className="pointer">
-                    Sign up here
-                  </b>
-                </p> */}
               </div>
             </div>
           </div>
@@ -297,8 +288,8 @@ const EnterpriseApplyCenter = () => {
         <div className="row content-row">
           <div className="col align-items-center flex-col">
             <div className="text sign-in">
-              <h2>기업 등록하기</h2>
-              <p>기업 인증</p>
+              <h2>Register a Company</h2>
+              <p>Company Verification</p>
             </div>
             <div className="img sign-in"></div>
           </div>
@@ -307,8 +298,8 @@ const EnterpriseApplyCenter = () => {
           <div className="col align-items-center flex-col">
             <div className="img sign-up"></div>
             <div className="text sign-up">
-              <h2>기업 등록하기</h2>
-              <p>정보 입력</p>
+              <h2>Register a Company</h2>
+              <p>Enter Information</p>
             </div>
           </div>
         </div>

@@ -1,32 +1,32 @@
-import "./css/JobNoticeApplyCenter.css";
-import { useNavigate } from "react-router-dom";
-import React, { useState, useEffect, useRef, useContext } from "react";
-import { IsEnrollContext } from "../App";
+import './css/JobNoticeApplyCenter.css';
+import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef, useContext } from 'react';
+import { IsEnrollContext } from '../App';
 
 const JobNoticeApplyCenter = () => {
   const nav = useNavigate();
   const { setIsEnroll } = useContext(IsEnrollContext);
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
 
   useEffect(() => {
-    const storedUsername = sessionStorage.getItem("username");
+    const storedUsername = sessionStorage.getItem('username');
     if (storedUsername) {
       setUsername(storedUsername);
     } else {
-      nav("/SingIn");
-      alert("이 기능을 사용하려면 로그인이 필요합니다.");
+      nav('/SingIn');
+      alert('You must log in to use this feature.');
     }
   }, [nav]);
 
   const [input, setInput] = useState({
-    title: "",
-    job_role: "",
-    experience: "",
-    employment_type: "",
-    dead_date: "",
-    location: "",
-    skills: "",
-    description: "",
+    title: '',
+    job_role: '',
+    experience: '',
+    employment_type: '',
+    dead_date: '',
+    location: '',
+    skills: '',
+    description: '',
   });
 
   const [showSection2, setShowSection2] = useState(false);
@@ -69,19 +69,19 @@ const JobNoticeApplyCenter = () => {
       !skills ||
       !description
     ) {
-      alert("모든 입력 필드를 채워주세요.");
+      alert('Please fill out all input fields.');
       return;
     }
     if (!selectedFile) {
-      alert("이미지를 업로드 해주세요.");
+      alert('Please upload an image.');
       return;
     }
 
     const formData = new FormData();
-    formData.append("enterprise_user_id", username);
-    formData.append("image", selectedFile);
+    formData.append('enterprise_user_id', username);
+    formData.append('image', selectedFile);
     formData.append(
-      "job",
+      'job',
       JSON.stringify({
         title,
         description,
@@ -98,20 +98,20 @@ const JobNoticeApplyCenter = () => {
     //   console.log(pair[0] + ": " + pair[1]);
     // }
 
-    fetch("http://3.36.90.4:8080/api/jobs", {
-      method: "POST",
+    fetch('http://3.36.90.4:8080/api/jobs', {
+      method: 'POST',
       body: formData,
     })
       .then((response) => response.json())
       .then((data) => {
         // console.log(data);
-        alert("등록 성공!");
+        alert('Registration successful!');
         setIsEnroll(true);
-        nav("/JobNotice/");
+        nav('/JobNotice/');
       })
       .catch((error) => {
         // console.error("Error submitting the form", error);
-        alert("등록 실패!");
+        alert('Registration failed!');
       });
   };
 
@@ -142,13 +142,13 @@ const JobNoticeApplyCenter = () => {
       !location ||
       !skills
     ) {
-      alert("모든 입력 필드를 채워주세요.");
+      alert('Please fill out all input fields.');
       return;
     }
 
     if (!validateDate(dead_date)) {
       alert(
-        "마감 기한이 올바른 형식이 아닙니다. YYYY-MM-DD 형식으로 입력해주세요."
+        'Deadline is not in the correct format. Please enter in YYYY-MM-DD format.'
       );
       return;
     }
@@ -160,17 +160,17 @@ const JobNoticeApplyCenter = () => {
     <div className="JobNoticeApplyCenter">
       <div className="gap2" />
       <div className="sections-wrapper">
-        <section className={`section1 ${showSection2 ? "hidden" : ""}`}>
+        <section className={`section1 ${showSection2 ? 'hidden' : ''}`}>
           <br />
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <div className="wrapper">
-              <span>제목&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span>Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
               <input
                 className="sectionInput"
                 type="text"
                 name="title"
-                placeholder="ex) 주방 보조 구합니다."
+                placeholder="ex) Looking for kitchen assistant."
                 value={input.title}
                 onChange={onChangeInput}
               />
@@ -179,12 +179,12 @@ const JobNoticeApplyCenter = () => {
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <div className="wrapper">
-              <span>직무&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span>job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
               <input
                 className="sectionInput"
                 type="text"
                 name="job_role"
-                placeholder="ex) 주방 보조"
+                placeholder="ex) kitchen assistant"
                 value={input.job_role}
                 onChange={onChangeInput}
               />
@@ -193,11 +193,13 @@ const JobNoticeApplyCenter = () => {
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <div className="wrapper">
-              <span>경력&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span>
+                career&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
               <input
                 type="text"
                 name="experience"
-                placeholder="ex) 3년 이상"
+                placeholder="ex) 3 years or more"
                 value={input.experience}
                 onChange={onChangeInput}
                 className="sectionInput"
@@ -207,11 +209,11 @@ const JobNoticeApplyCenter = () => {
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <div className="wrapper">
-              <span>고용형태</span>
+              <span>Employment type</span>
               <input
                 type="text"
                 name="employment_type"
-                placeholder="ex) 일용직"
+                placeholder="ex) day laborer"
                 value={input.employment_type}
                 onChange={onChangeInput}
                 className="sectionInput"
@@ -221,7 +223,7 @@ const JobNoticeApplyCenter = () => {
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <div className="wrapper">
-              <span>마감기한</span>
+              <span>deadline</span>
               <input
                 type="text"
                 name="dead_date"
@@ -235,11 +237,11 @@ const JobNoticeApplyCenter = () => {
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <div className="wrapper">
-              <span>근무지역</span>
+              <span>Working area</span>
               <input
                 type="text"
                 name="location"
-                placeholder="ex) 서울특별시 종로구 낙원동"
+                placeholder="ex) Nakwon-dong, Jongno-gu, Seoul"
                 value={input.location}
                 onChange={onChangeInput}
                 className="sectionInput"
@@ -249,11 +251,11 @@ const JobNoticeApplyCenter = () => {
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <div className="wrapper">
-              <span>스킬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <span>skill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
               <input
                 type="text"
                 name="skills"
-                placeholder="ex) 재료 손질, 청소"
+                placeholder="ex) Material preparation, cleaning"
                 value={input.skills}
                 onChange={onChangeInput}
                 className="sectionInput"
@@ -261,13 +263,16 @@ const JobNoticeApplyCenter = () => {
             </div>
           </div>
           <br />
-          <button onClick={handleProceed}>이어서 진행하기</button>
+          <button onClick={handleProceed}>Continue</button>
         </section>
-        <section className={`section2 ${showSection2 ? "" : "hidden"}`}>
+        <section className={`section2 ${showSection2 ? '' : 'hidden'}`}>
           <span className="jobdes">
-            업무내용, 지원자격, 우대사항, 근무요일,
+            Job description, application qualifications, preferential treatment,
+            working days,
           </span>
-          <span className="jobdes">근무시간, 지원방법 등을 설명해주세요!</span>
+          <span className="jobdes">
+            Please explain your working hours, application methods, etc.!
+          </span>
           <div className="input-group">
             <i className="bx bxs-lock-alt"></i>
             <textarea
@@ -286,7 +291,7 @@ const JobNoticeApplyCenter = () => {
               className="sectionInput"
             />
           </div>
-          <button onClick={onSubmit}>등록하기</button>
+          <button onClick={onSubmit}>registration</button>
         </section>
       </div>
     </div>

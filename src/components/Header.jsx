@@ -13,7 +13,7 @@ const Header = () => {
   };
   const searchHandler = () => {
     if (searchKeyword === '') {
-      alert('❌ 검색어를 입력해 주세요!');
+      alert('❌ Please enter a search term!');
     } else {
       nav(`/search/${searchKeyword}`);
       setSearchKeyword('');
@@ -41,7 +41,7 @@ const Header = () => {
       const hasEnterprise = await response1.json();
 
       if (!hasEnterprise) {
-        alert('기업 등록을 먼저 해주세요!');
+        alert('Please register your company first!');
         nav('/');
       } else {
         nav('/JobNoticeApply');
@@ -53,20 +53,19 @@ const Header = () => {
 
   return (
     <div className="Header">
-
       <div className="logo" onClick={() => nav('/')}></div>
-      <div onClick={() => nav('/CompanyInfo')}>기업 정보</div>
-      <div onClick={() => nav('/JobNotice')}>채용 공고</div>
+      <div onClick={() => nav('/CompanyInfo')}>Company Information</div>
+      <div onClick={() => nav('/JobNotice')}>Job Postings</div>
       {!loginState.userEnterprise && (
-        <div onClick={() => nav('/IegalAdvice')}>법률 상담</div>
+        <div onClick={() => nav('/IegalAdvice')}>Legal Consultation</div>
       )}
-      <div onClick={() => nav('/Support')}>노동자 지원센터</div>
+      <div onClick={() => nav('/Support')}>Worker Support Center</div>
 
       <div className="searchBox">
         <input
           type="text"
           className="searchBoxInner"
-          placeholder="기업 정보와 채용 공고, 기업 리뷰를 검색해보세요!"
+          placeholder="Search for company information, job postings, and company reviews!"
           onChange={changeInput}
           onKeyDown={keyHandler}
         />
@@ -79,7 +78,7 @@ const Header = () => {
       <div className="right-child">
         {loginState.userEnterprise && (
           <div className="jobNoticeApply" onClick={handleJobNoticeApply}>
-            채용공고 등록
+            Post a Job
           </div>
         )}
         {loginState.userEnterprise && (
@@ -89,12 +88,13 @@ const Header = () => {
               nav('/EnterpriseApply');
             }}
           >
-            기업 등록
+            <main></main>
+            Register a Company
           </div>
         )}
       </div>
       {!loginState.userLogin && !loginState.userEnterprise && (
-        <div onClick={() => nav('/SingIn')}>로그인 / 회원가입</div>
+        <div onClick={() => nav('/SingIn')}>Login / Sign Up</div>
       )}
     </div>
   );

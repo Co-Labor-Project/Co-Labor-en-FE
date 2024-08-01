@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "./css/JobNoticeItem.css";
-import useScrollFadeIn from "../hooks/fade_in";
-import { useNavigate, useParams } from "react-router-dom";
-import useEmpty from "../hooks/useEmpty";
+import React, { useState, useEffect } from 'react';
+import './css/JobNoticeItem.css';
+import useScrollFadeIn from '../hooks/fade_in';
+import { useNavigate, useParams } from 'react-router-dom';
+import useEmpty from '../hooks/useEmpty';
 
 const JobNotieItem = ({
   imageName,
@@ -17,13 +17,13 @@ const JobNotieItem = ({
   skills,
   deadDate,
 }) => {
-  const fadeInProps = useScrollFadeIn("up", 1);
+  const fadeInProps = useScrollFadeIn('up', 1);
   const nav = useNavigate();
   const parms = useParams();
   const isObjEmpty = useEmpty(parms);
-  const name = enterprise?.name || "No Enterprise Name";
+  const name = enterprise?.name || 'No Enterprise Name';
   const defaultImage =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Gn8yBWZsQEVzdXIx-qFWrYYlphEWWnG4Og&s";
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Gn8yBWZsQEVzdXIx-qFWrYYlphEWWnG4Og&s';
   const [imageSrc, setImageSrc] = useState(defaultImage);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const JobNotieItem = ({
   const clickHandler = () => {
     if (
       isObjEmpty ||
-      parms.keyword === "undefined" ||
+      parms.keyword === 'undefined' ||
       parms.keyword === undefined
     ) {
       nav(`/JobNotice/${job_id}`);
@@ -79,10 +79,12 @@ const JobNotieItem = ({
         </div>
         <div className="jobNoticeInfo">
           <div className="jobNotice_infoTitle">{title}</div>
-          <div className="jobNotice_infoCondi">마감 기한 : {deadDate}</div>
-          <div className="jobNotice_infoCondi">직무 : {jobRole}</div>
-          <div className="jobNotice_infoCondi">고용형태 : {employmentType}</div>
-          <div className="jobNotice_infoCondi">근무지역 : {location}</div>
+          <div className="jobNotice_infoCondi">Deadline: {deadDate}</div>
+          <div className="jobNotice_infoCondi">job : {jobRole}</div>
+          <div className="jobNotice_infoCondi">
+            Employment type: {employmentType}
+          </div>
+          <div className="jobNotice_infoCondi">Working area:{location}</div>
         </div>
       </div>
     </div>

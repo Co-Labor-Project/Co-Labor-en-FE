@@ -1,6 +1,6 @@
 // components/RadarChart.js
-import React from "react";
-import { Radar } from "react-chartjs-2";
+import React from 'react';
+import { Radar } from 'react-chartjs-2';
 import {
   Chart,
   RadialLinearScale,
@@ -9,7 +9,7 @@ import {
   Filler,
   Tooltip,
   Legend,
-} from "chart.js";
+} from 'chart.js';
 
 Chart.register(
   RadialLinearScale,
@@ -23,15 +23,15 @@ Chart.register(
 const RadarChart = ({ data }) => {
   const chartData = {
     labels: [
-      "승진 기회",
-      "복지 및 급여",
-      "업무와 삶의 균형",
-      "사내 문화",
-      "경영진",
+      'Promotion Opportunities',
+      'Benefits and Compensation',
+      'Work-Life Balance',
+      'Company Culture',
+      'Management',
     ],
     datasets: [
       {
-        label: "기업 평균",
+        label: 'Average Review',
         data: [
           data.averagePromotion,
           data.averageSalary,
@@ -39,8 +39,8 @@ const RadarChart = ({ data }) => {
           data.averageCulture,
           data.averageManagement,
         ],
-        backgroundColor: "rgba(139, 204, 159, 0.7)", // 배경색 변경
-        borderColor: "rgba(139, 204, 159, 1)", // 테두리 색상 변경
+        backgroundColor: 'rgba(139, 204, 159, 0.7)', // 배경색 변경
+        borderColor: 'rgba(139, 204, 159, 1)', // 테두리 색상 변경
         borderWidth: 1,
       },
     ],
@@ -65,7 +65,7 @@ const RadarChart = ({ data }) => {
     plugins: {
       legend: {
         labels: {
-          color: "black", // 범례 텍스트 색상 변경
+          color: 'black', // 범례 텍스트 색상 변경
         },
       },
     },

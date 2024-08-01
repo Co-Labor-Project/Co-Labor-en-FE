@@ -34,7 +34,7 @@ const SearchOutput = ({ input }) => {
           },
         });
         if (!response.ok) {
-          throw new Error('데이터 불러오기 실패');
+          throw new Error('Failed to Load Data');
         }
         if (desURL.indexOf('AiSearch') === -1) {
           setIsAi(false);
@@ -97,7 +97,7 @@ const SearchOutput = ({ input }) => {
   return (
     <div>
       <div className="inputText">
-        <h2> &quot;{input}&quot; 검색 결과</h2>
+        <h2> &quot;{input}&quot; Search Results</h2>
       </div>
       {loading ? (
         <p>Loading...</p>

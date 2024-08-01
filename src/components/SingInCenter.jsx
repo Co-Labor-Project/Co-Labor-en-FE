@@ -1,28 +1,28 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
-import "./css/SingInCenter.css";
-import { useNavigate } from "react-router-dom";
-import { LoginContext } from "../App";
-import axios from "axios";
+import React, { useState, useEffect, useRef, useContext } from 'react';
+import './css/SingInCenter.css';
+import { useNavigate } from 'react-router-dom';
+import { LoginContext } from '../App';
+import axios from 'axios';
 
 const SingInCenter = () => {
   const { loginState, setLoginState } = useContext(LoginContext);
   const nav = useNavigate();
   const containerRef = useRef(null);
   const [input, setInput] = useState({
-    username: "",
-    password: "",
-    passwordConfirm: "",
-    email: "",
-    name: "",
+    username: '',
+    password: '',
+    passwordConfirm: '',
+    email: '',
+    name: '',
     isEnterprise: false,
   });
-  const [Loginusername, setUsername] = useState("");
-  const [Loginpassword, setPassword] = useState("");
+  const [Loginusername, setUsername] = useState('');
+  const [Loginpassword, setPassword] = useState('');
 
   useEffect(() => {
     // console.log("Login state changed:", loginState);
     if (loginState.userLogin || loginState.userEnterprise) {
-      nav("/");
+      nav('/');
     }
   }, [loginState, nav]);
 
@@ -37,7 +37,7 @@ const SingInCenter = () => {
     const { name, value } = e.target;
     setInput((prevInput) => ({
       ...prevInput,
-      [name]: name === "isEnterprise" ? e.target.checked : value,
+      [name]: name === 'isEnterprise' ? e.target.checked : value,
     }));
   };
 
@@ -59,35 +59,34 @@ const SingInCenter = () => {
       )
       .then((response) => {
         const result = response.data;
-        // console.log("로그인결과: ", result);
-        if (result.message === "Login successful") {
-          sessionStorage.setItem("username", Loginusername);
-          sessionStorage.setItem("userType", result.userType);
-          alert("로그인 성공!");
+        if (result.message === 'Login successful') {
+          sessionStorage.setItem('username', Loginusername);
+          sessionStorage.setItem('userType', result.userType);
+          alert('Login Successful!');
           // console.log(document.cookie);
-          if (result.userType === "enterprise") {
+          if (result.userType === 'enterprise') {
             setLoginState({ userEnterprise: true, userLogin: false });
           } else {
             setLoginState({ userLogin: true, userEnterprise: false });
           }
         } else {
-          throw new Error("로그인 실패");
+          throw new Error('Login Failed');
         }
       })
       .catch((error) => {
-        console.error("Error:", error);
-        alert("로그인 실패!");
+        console.error('Error:', error);
+        alert('Login Failed!');
       });
   };
 
   const onsubmit = () => {
     if (input.password !== input.passwordConfirm) {
-      alert("패스워드가 일치하지 않습니다.");
+      alert('Passwords do not match.');
       return;
     }
     const url = input.isEnterprise
-      ? "http://3.36.90.4:8080/auth/signup-enterprise"
-      : "http://3.36.90.4:8080/auth/signup-labor";
+      ? 'http://3.36.90.4:8080/auth/signup-enterprise'
+      : 'http://3.36.90.4:8080/auth/signup-labor';
     // console.log("패스워드 일치 후 요청 보내기");
     const json = JSON.stringify(input);
     signUp(json, url);
@@ -95,35 +94,35 @@ const SingInCenter = () => {
 
   const signUp = (json, url) => {
     fetch(url, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: json,
-      credentials: "include",
+      credentials: 'include',
     })
       .then((response) => response.json())
       .then((result) => {
         // console.log("회원가입결과: ", result);
-        if (!alert("회원가입 성공!")) nav("/");
+        if (!alert('Registration Successful!')) nav('/');
       })
       .catch((error) => {
         // console.error("Error:", error);
-        alert("회원가입 실패!");
+        alert('Registration Failed!');
       });
   };
 
   const toggle = () => {
     if (containerRef.current) {
-      containerRef.current.classList.toggle("sign-in");
-      containerRef.current.classList.toggle("sign-up");
+      containerRef.current.classList.toggle('sign-in');
+      containerRef.current.classList.toggle('sign-up');
     }
   };
 
   useEffect(() => {
     if (containerRef.current) {
       setTimeout(() => {
-        containerRef.current.classList.add("sign-in");
+        containerRef.current.classList.add('sign-in');
       }, 200);
     }
   }, []);
@@ -187,7 +186,7 @@ const SingInCenter = () => {
                 </div>
                 <div className="input-group">
                   <div className="enterpriseMem">
-                    <span>기업회원이신가요?</span>
+                    <span>Are you a company member?</span>
                     <input
                       type="checkbox"
                       name="isEnterprise"

@@ -77,6 +77,8 @@
   border: 5px solid rgb(170, 236, 185);
   border-radius: 5px;
   transition: all 0.5s;
+  font-size: 10px;
+  font-weight: 550;
 }
 
 .chooseMode {

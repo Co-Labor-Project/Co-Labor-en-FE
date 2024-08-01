@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import useStarRate from "../hooks/useStarRate"; // 커스텀 훅 import
+import React from 'react';
+import styled from 'styled-components';
+import useStarRate from '../hooks/useStarRate'; // 커스텀 훅 import
 
 const StarRate = ({ rating }) => {
-  const STAR_IDX_ARR = ["first", "second", "third", "fourth", "last"];
+  const STAR_IDX_ARR = ['first', 'second', 'third', 'fourth', 'last'];
   const ratesResArr = useStarRate(rating); // 커스텀 훅 사용
 
   return (

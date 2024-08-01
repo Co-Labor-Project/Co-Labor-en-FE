@@ -15,7 +15,7 @@ const RecentReview = ({ data }) => {
   return (
     <>
       <div className="recentReview">
-        <div className="title">📝 최근 리뷰</div>
+        <div className="title">📝 Recent Reviews</div>
         <div className="gap"></div>
 
         <div className="recentReviewList">
