@@ -1,0 +1,172 @@
+.CompanyDetailsCenterCompany {
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.CompanyDetailsCenterCompanyBasicInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.CompanyDetailsCenterCompanyImg {
+  width: 150px; /* 이미지 크기 조정 */
+  height: 150px; /* 이미지 크기 조정 */
+}
+
+.CompanyDetailsCenterCompanyText {
+  margin-left: 250px;
+  font-size: 20px;
+  line-height: 45px;
+
+  padding: 18px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: 0px solid #58c179;
+  max-width: 500px;
+  cursor: pointer;
+  border-radius: 8px; /* 모서리를 둥글게 */
+}
+
+.CompanyDetailsCenterJobList {
+  padding: 20px 0px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.CompanyDetailsCenterJobItem {
+  margin: 30px 8px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.1s smooth;
+  border: 0px solid #58c179;
+  max-width: 250px;
+  cursor: pointer;
+  border-radius: 8px; /* 모서리를 둥글게 */
+  margin-bottom: 70px;
+  height: 440px;
+}
+
+.CompanyDetailsCenterjobNotice_infoDescription {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.CompanyDetailsCenterJobNotieItem:hover {
+  border: 3px solid #58c179;
+}
+
+.CompanyDetailsCenterjobNoticeImg {
+  border-radius: 15px;
+  width: 172px;
+  height: 124px;
+}
+
+.CompanyDetailsCenterjobNotice_infoName {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #232527;
+}
+
+.CompanyDetailsCenterjobNotice_infoTitle {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.CompanyDetailsCenterjobNotice_infoCondi {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: normal;
+  width: 200px;
+}
+
+.CompanyDetailsCenterAllReview {
+  padding: 20px 0px;
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+}
+
+.CompanyDetailsCenterAllReviewitemWrapper {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 500px;
+
+  align-items: center;
+  margin-top: 10px;
+  margin: 0 auto;
+  justify-content: center;
+  border: 0px solid var(--primary-color);
+  transition: all 0.5s smooth;
+}
+
+.CompanyDetailsCenterAllReviewitemWrapper:hover {
+  border: 3px solid var(--primary-color);
+}
+.CompanyDetailsCenterReviewList {
+  padding: 20px 0px;
+  width: 1200px;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.CompanyDetailsCenterReview {
+  margin-top: 120px;
+}
+
+.CompanyDetailsCenterReviewitemWrapper {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  margin-left: 60px;
+
+  width: 500px;
+  transition: all 0.3s smooth;
+  border: 0px solid #58c179;
+}
+.CompanyDetailsCenterReviewitemWrapper:hover {
+  border: 3px solid #58c179;
+}
+.CompanyDetailsCenterReviewitemWrapper h5 {
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.CompanyDetailsCenterReviewInfo {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333;
+  line-height: 35px;
+}
+
+.gap2 {
+  height: 40px;
+}
+
+.width-test {
+  width: 480px;
+}

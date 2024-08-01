@@ -1,0 +1,30 @@
+.companyItem {
+  margin: 30px 10px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.5s smooth;
+  border: 0px solid #58c179;
+  max-width: 200px;
+}
+.companyItem:hover {
+  border: 3px solid #58c179;
+  width: 230px;
+}
+.companyImg {
+  display: flex;
+  margin: 0 auto;
+}
+.companyImg > img {
+  margin: 0 auto;
+}
+.company_infoName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.company_info {
+  margin-top: 8px;
+}

@@ -1,0 +1,14 @@
+select {
+  padding: 10px 10px;
+  border-radius: 15px;
+  border: 2px solid #bfbfbf;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+select:hover {
+  border: 2.5px solid #58c179;
+}
+
+label {
+  margin: 0px 10px;
+}

@@ -1,0 +1,47 @@
+.recentReviewItem {
+  width: 500px;
+  margin: 20px;
+}
+
+.itemWrapper {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.itemWrapper h5 {
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.itemWrapper .info {
+  margin-top: 10px;
+  font-size: 0.875em;
+  color: #777;
+}
+
+.moreBtn {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #58c179;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.moreBtn:hover {
+  background-color: #72dc72;
+}
+
+h5 {
+  display: flex;
+  align-items: center;
+}
+
+h5 > img {
+  margin-right: 7px;
+}

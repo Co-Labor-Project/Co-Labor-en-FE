@@ -1,0 +1,90 @@
+.Header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  font-size: 15px;
+
+  padding: 5px 0px;
+  z-index: 100;
+}
+.Header > div {
+  display: flex;
+  padding: 0px 18px;
+  cursor: pointer;
+  transition: width 1s, height 1s, border 1s, font-size 0.5s;
+  font-weight: bold;
+}
+
+.Header > div:hover {
+  font-size: 19px;
+}
+.Header > .logo {
+  background-image: url(/src/assets/Co-labor.png);
+  width: 140px;
+  height: 70px;
+  background-size: cover;
+}
+.Header > .logo:hover {
+  background-image: url(/src/assets/Co-labor.png);
+  width: 160px;
+  height: 70px;
+  background-size: cover;
+}
+.Header > .right-child {
+  margin-left: auto;
+}
+
+.searchBox {
+  border: 3px solid #58c179;
+  width: 500px;
+  height: 40px;
+  border-radius: 20px;
+  margin: auto;
+
+  /* transition-property: width, height;
+  transition-duration: 1s, 1s; */
+}
+
+.searchBox:focus-within {
+  border: 4px solid #a1e2a1;
+  width: 600px;
+  height: 50px;
+}
+
+.searchBoxInner {
+  border: none;
+  width: 100%;
+  font-size: 18px;
+}
+.searchBoxInner:focus {
+  outline: none;
+}
+
+.searchBoxIcon {
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  z-index: 1px;
+}
+
+.enterpriseApply {
+  color: #ff5d5d;
+  border: 2px solid #ff5d5d;
+  padding: 8px;
+  border-radius: 15px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+.jobNoticeApply {
+  color: #2c88f8;
+  border: 2px solid #2c88f8;
+  padding: 8px;
+  border-radius: 15px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}

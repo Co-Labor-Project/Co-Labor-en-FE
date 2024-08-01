@@ -1,0 +1,40 @@
+.JobNotieItem {
+  margin: 30px 8px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.1s;
+  border: 0px solid #58c179;
+  cursor: pointer;
+  max-width: 280px;
+  height: 350px;
+}
+.JobNotieItem:hover {
+  border: 3px solid #58c179;
+}
+.jobNoticeImg {
+  border-radius: 15px;
+  width: 150px;
+  height: 126px;
+}
+
+.jobNotice_infoName {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #232527;
+}
+
+.jobNotice_infoTitle {
+  margin-top: 3px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.jobNotice_infoCondi {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  white-space: normal;
+  width: 200px;
+}

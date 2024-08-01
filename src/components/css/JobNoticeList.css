@@ -1,0 +1,27 @@
+.JobNoticeList {
+  padding: 20px 0px;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.jobNoticeFilter {
+  position: absolute;
+  left: calc(50% - 550px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 1100px;
+}
+.filterSort {
+  margin-left: auto;
+}
+.isNullJobNotice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}

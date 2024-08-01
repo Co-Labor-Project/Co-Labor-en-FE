@@ -1,0 +1,82 @@
+.companyList {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.w-btn {
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: 'paybooc-Light', sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.w-btn-outline {
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: 'paybooc-Light', sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.w-btn-indigo {
+  background-color: aliceblue;
+  color: var(--primary-color);
+}
+
+.w-btn-indigo-outline {
+  border: 3px solid aliceblue;
+  color: var(--primary-color);
+}
+
+.w-btn-indigo-outline:hover {
+  color: var(--primary-color);
+  background: aliceblue;
+}
+.w-btn:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.w-btn-outline:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.w-btn:active {
+  transform: scale(1.5);
+}
+
+.w-btn-outline:active {
+  transform: scale(1.5);
+}
+
+.companylist_AI_search {
+  width: 800px;
+  margin: 0 auto;
+}
+.searchContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
