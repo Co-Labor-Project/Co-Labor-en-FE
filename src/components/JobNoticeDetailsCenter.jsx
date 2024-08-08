@@ -30,13 +30,13 @@ const JobNoticeDetailsCenter = () => {
 
       if (job.imageName) {
         const checkImage = async () => {
-          const url = `http://3.36.90.4:8080/static/images/${job.imageName}`;
+          const url = `http://43.203.208.57:8080/static/images/${job.imageName}`;
           try {
             const response = await fetch(url);
             if (response.ok) {
               setDisplayJobPhoto(url);
             } else if (response.status === 404) {
-              const fallbackUrl = `http://3.36.90.4:8080/api/jobs/images/${job.imageName}`;
+              const fallbackUrl = `http://43.203.208.57:8080/api/jobs/images/${job.imageName}`;
               const fallbackResponse = await fetch(fallbackUrl);
               if (fallbackResponse.ok) {
                 setDisplayJobPhoto(fallbackUrl);
@@ -69,7 +69,7 @@ const JobNoticeDetailsCenter = () => {
   }
 
   const displayCompanyPhoto = companyData.imageName
-    ? `http://3.36.90.4:8080/static/images/${companyData.imageName}`
+    ? `http://43.203.208.57:8080/static/images/${companyData.imageName}`
     : 'https://cdn-icons-png.flaticon.com/512/4091/4091968.png';
 
   const defaultCompanyType = 'Please categorize the companies!';

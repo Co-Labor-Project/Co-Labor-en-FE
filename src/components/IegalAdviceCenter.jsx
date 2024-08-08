@@ -23,7 +23,7 @@ const IegalAdviceCenter = () => {
   // 메시지 목록 불러오기
   const fetchMessages = (userId) => {
     setLoading(true);
-    fetch(`http://3.36.90.4:8080/api/chatting/all?userId=${userId}`, {
+    fetch(`http://43.203.208.57:8080/api/chatting/all?userId=${userId}`, {
       credentials: 'include',
     })
       .then((response) => {
@@ -65,7 +65,7 @@ const IegalAdviceCenter = () => {
     ]);
 
     fetch(
-      `http://3.36.90.4:8080/api/chatting/send?userId=${username}&message=${encodeURIComponent(
+      `http://43.203.208.57:8080/api/chatting/send?userId=${username}&message=${encodeURIComponent(
         message
       )}`,
       {

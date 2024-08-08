@@ -19,8 +19,8 @@ function SupportCenterMap() {
 
   useEffect(() => {
     const url = optionCenter
-      ? 'http://3.36.90.4:8080/api/hospitals/region/서울특별시 중구'
-      : 'http://3.36.90.4:8080/api/support-centers/all';
+      ? 'http://43.203.208.57:8080/api/hospitals/region/서울특별시 중구'
+      : 'http://43.203.208.57:8080/api/support-centers/all';
 
     axios
       .get(url)

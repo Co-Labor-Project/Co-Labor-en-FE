@@ -98,7 +98,7 @@ const JobNoticeApplyCenter = () => {
     //   console.log(pair[0] + ": " + pair[1]);
     // }
 
-    fetch('http://3.36.90.4:8080/api/jobs', {
+    fetch('http://43.203.208.57:8080/api/jobs', {
       method: 'POST',
       body: formData,
     })

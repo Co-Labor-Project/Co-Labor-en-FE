@@ -34,7 +34,7 @@ function App() {
   const [isEnroll, setIsEnroll] = useState(false);
 
   useEffect(() => {
-    fetch('http://3.36.90.4:8080/api/enterprises/eng')
+    fetch('http://43.203.208.57:8080/api/enterprises/eng')
       .then((response) => response.json())
       .then((data) => {
         setCompanies(data);
@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('http://3.36.90.4:8080/api/jobs/eng')
+    fetch('http://43.203.208.57:8080/api/jobs/eng')
       .then((response) => response.json())
       .then((data) => {
         setJobs(data);
@@ -56,7 +56,7 @@ function App() {
   }, [isEnroll]);
 
   useEffect(() => {
-    fetch('http://3.36.90.4:8080/api/reviews/all')
+    fetch('http://43.203.208.57:8080/api/reviews/all')
       .then((response) => response.json())
       .then((data) => setReviews(data))
       .catch((error) => console.error('Error fetching reviews:', error));

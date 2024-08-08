@@ -29,7 +29,7 @@ const Header = () => {
   const handleJobNoticeApply = async () => {
     try {
       const response1 = await fetch(
-        `http://3.36.90.4:8080/auth/hasEnterprise?username=${sessionStorage.getItem(
+        `http://43.203.208.57:8080/auth/hasEnterprise?username=${sessionStorage.getItem(
           'username'
         )}`,
         {
