@@ -26,7 +26,7 @@
 
 ## 🗂️ 시스템 아키텍처
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/System_Architecture.png" width="70%" height="70%" />
+<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/System_Architecture.png" width="80%" height="80%" />
 
 ## 🗃️ ERD
 
