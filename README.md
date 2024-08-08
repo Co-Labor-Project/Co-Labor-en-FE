@@ -1,4 +1,4 @@
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/Co-Labor2.jpg" width="100%" height="100%" />
+<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/Co-Labor.png" width="100%" height="100%" />
 
 # 👷 Co-Labor: 외국인 근로자 고용 서포트 플랫폼 서비스
 
@@ -158,4 +158,4 @@
 
 
 ## 📋 제안서
-[Co-Labor_Proposal.pdf](https://github.com/user-attachments/files/16325293/Co-Labor_Proposal.pdf)
+[Co-Labor_Proposal.pdf](https://github.com/user-attachments/files/16548393/Co-Labor_Proposal.pdf)
