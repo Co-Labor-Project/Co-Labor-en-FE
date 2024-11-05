@@ -1,161 +1,108 @@
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/Co-Labor.png" width="100%" height="100%" />
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/profile/CoLabor.png" width="100%" height="100%" />
 
-# 👷 Co-Labor: 외국인 근로자 고용 서포트 플랫폼 서비스
+[English Version](https://github.com/Co-Labor-Project/.github/blob/main/profile/README-EN.md)
 
-- 외국인 근로자들이 한국에서 안정적으로 정착하고 적응할 수 있도록 돕는 웹사이트
-- 외국인 근로자들이 겪는 일자리, 정보 부족, 법률 문제 등을 해결하고, 다양한 지원 서비스를 제공
+# 👷 Co-Labor : 외국인 근로자 서포트 플랫폼
+
+- 외국인 근로자들이 한국에서 안정적으로 정착하고 적응할 수 있도록 돕는 플랫폼
+- 일자리, 정보 부족, 법률 등 외국인 근로자들이 겪을 수 있는 다양한 문제 해결에 도움을 줌
+
+## 💡 Background
+
+### 1️⃣ 외국인 근로자 필요성 증가
+
+&nbsp;저출산과 인구 감소로 인해 외국인 근로자에 대한 수요가 급증하고 있으며, 한국은 아시아 최초의 다문화 국가로 변화하고 있음. 이로 인해 다양한 문화적 배경을 가진 근로자들이 국내 노동 시장에 진입하고, 이들은 경제 성장에 기여하고 있음.
+
+### 2️⃣ 채용 시장의 변화
+
+&nbsp;외국인 근로자의 증가는 채용 시장의 구조와 동향에 큰 변화를 초래할 것으로 예상됨. 기업들은 외국인 근로자를 효과적으로 채용하고 관리하기 위해 맞춤형 서비스와 솔루션을 필요로 할 것이며, 이에 따른 다양한 서비스의 수요 증가가 예상됨.
+
+### 3️⃣ 지원 부족 문제
+
+&nbsp;그러나 현재 체계적인 지원 시스템이 부족하여 많은 외국인 근로자들이 언어 장벽, 정보 접근성 부족, 인권 침해 등의 문제를 겪고 있음. 이러한 어려움은 그들의 직업 안정성과 한국에서의 적응에 부정적인 영향을 미치며, 결과적으로 사회 통합에도 장애가 됨.
+
+### 4️⃣ 해결 필요성
+
+&nbsp;따라서, 사회적 약자인 외국인 근로자를 위한 체계적인 지원 서비스 개발이 필요함. 이는 외국인 근로자들이 한국 사회에 성공적으로 적응하도록 돕고, 전체 사회의 통합을 촉진하는 데 기여할 수 있음.
 
 ## ✨ 주요 기능
 
-### 1️⃣ 채용 공고 및 기업 리뷰
+### ◻️ 채용 공고 및 기업 리뷰
 
-&nbsp;다양한 직무, 경력, 고용 형태, 근무 지역 등을 포함한 상세한 채용 공고를 제공합니다. 사용자는 기업의 상세 페이지에서 기업 정보와 함께 다른 근로자들의 리뷰를 통해 기업의 신뢰도를 평가할 수 있습니다. 이를 통해 본인에게 적합한 직무와 신뢰할 수 있는 기업을 효율적으로 찾아 지원할 수 있습니다.
+&nbsp;다양한 직무, 경력, 고용 형태, 근무 지역 등을 포함한 상세한 채용 공고를 제공. 사용자는 기업 상세 페이지에서 기업 정보와 함께 다른 사용자들의 리뷰를 통해 기업의 신뢰도를 평가할 수 있음.
 
-### 2️⃣ AI 검색 기능
+### ◻️ 지원 센터 및 병원 정보
 
-&nbsp;DB에서 추출한 데이터를 기반으로 Word2Vec 모델을 학습시켜 유사 키워드를 생성합니다. 사용자가 입력한 키워드와 유사한 키워드를 통해 관련된 데이터를 보다 빠르고 정확하게 검색할 수 있습니다. 이를 통해 사용자는 필요한 정보를 신속하고 효율적으로 찾을 수 있습니다.
+&nbsp;사용자의 현재 위치를 기반으로 인근 외국인 근로자 지원 센터와 병원의 위치 및 상세 정보를 지도에서 제공. 사용자는 지도에서 해당 위치를 클릭하면 해당 위치로 이동 가능.
 
-### 3️⃣ 법률 챗봇
+### ◻️ 법률 챗봇
 
-&nbsp;OpenAI API 모델을 활용하여 외국인 근로자들이 직장에서 겪을 수 있는 법률적인 문제에 대해 도움을 받을 수 있는 법률 상담 챗봇을 제공합니다. 챗봇은 한국의 노동법과 관련된 다양한 질문에 신속하고 정확하게 답변하여 법적 문제를 해결하는 데 도움을 줍니다.
+&nbsp;외국인 근로자들이 마주하는 다양한 법률적인 문제에 대해 도움을 받을 수 있는 법률 상담 챗봇. 챗봇은 사용자의질문에 대해 적절한 상담과 관련 판례 요약 및 참조 조문을 제공.
 
-## 🔗 개발 진행 상황
+### ◻️ 다국어 번역
 
-- **Front-end** &nbsp;&nbsp;&nbsp;[FE Repository](https://github.com/Co-Labor-Project/Co-Labor-FE)
-- **Back-end** &nbsp;&nbsp;&nbsp;&nbsp;[BE Repository](https://github.com/Co-Labor-Project/Co-Labor-BE)
+&nbsp;60개 이상의 언어에 대하여 번역 기능을 제공. 한글이 익숙하지 않은 사용자는 선택한 언어로 편리하게 서비스를 이용할 수 있음.
 
 ## 🗂️ 시스템 아키텍처
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/System_Architecture.png" width="80%" height="80%" />
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/profile/System_Architecture.png" width="100%" height="100%" />
 
-## 🗃️ ERD
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/ERD.png" width="100%" height="100%" />
-
-### `labor_user` - 일반 회원
-
-- 외국인 근로자(사용자) 정보
-
-### `enterprise_user` - 기업 회원
-
-- 채용 공고를 게시할 수 있는 기업 사용자 정보
-
-### `enterprise` - 기업
-
-- 기업 상세 정보
-
-### `enterprise_queue` - 기업 대기열
-
-- 등록 승인을 기다리는 기업 정보
-
-### `job` - 채용 공고
-
-- 기업 회원이 게시하는 채용 공고
-
-### `review` - 리뷰
-
-- 사용자가 기업에 대해 남긴 리뷰
-
-### `hospital` - 병원
-
-- 병원 상세 정보
-
-### `support_center` - 외국인 근로자 지원 센터
-
-- 외국인 근로자 지원 센터 상세 정보
-
-### `chatting` - 채팅
-
-- 사용자와 법률 챗봇간의 채팅 메시지
-
-### Foreign Key(외래 키) 제약 조건
-
-- `job` : `enterprise_user_id` 및 `enterprise_id`는 `enterprise_user` 테이블 참조
-- `review` : `labor_user_id`는 `labor_user` 테이블 참조, `enterprise_id`는 `enterprise` 테이블 참조
-- `enterprise_user` : `enterprise_id`는 `enterprise` 테이블 참조
-- `chatting` : `labor_user_id`는 `labor_user` 테이블 참조
 
 ## 📚 기술 스택
 
-|                            |                                                                                                                                                                                                                      Skills                                                                                                                                                                                                                       |
-| :------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| **Front-end**              | ![Static Badge](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Static Badge](https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Static Badge](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Static Badge](https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=react&logoColor=black) |
-| **Back-end**               |                                                         ![Static Badge](https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Static Badge](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![Static Badge](https://img.shields.io/badge/openai-412991?style=for-the-badge&logo=openai&logoColor=white)                                                         |
-| **Version Control System** |                                                                                     [![Static Badge](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Co-Labor-Project/demo-repository/)![Static Badge](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)                                                                                      |
-| **Collaboration**          |                                                                      ![Static Badge](https://img.shields.io/badge/slack-4A154B?style=for-the-badge&logo=slack&logoColor=white) [![Static Badge](https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white)](https://mixolydian-idea-627.notion.site/7d14829c5a3e4b84930b2c5a8b0c9838?pvs=4)                                                                      |
-| **Design**                 |                                                                                                         [![Static Badge](https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/YddHONkDl0nqcbQVkUEVTa/%EA%B3%B5%EB%AA%A8%EC%A0%84?node-id=33-251&t=ocRWZPY412U61gb0-0)                                                                                                          |
+|               |                                                                                                                                                                                                                                                                                                                                                                                                                        Skills                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Front-end** |                                                                                                                                               ![Static Badge](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Static Badge](https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Static Badge](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Static Badge](https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![Static Badge](https://img.shields.io/badge/vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)                                                                                                                                               |
+| **Back-end**  |                                                                                  ![Static Badge](https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![Static Badge](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Static Badge](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![Static Badge](https://img.shields.io/badge/elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white) ![Static Badge](https://img.shields.io/badge/openai-412991?style=for-the-badge&logo=openai&logoColor=white) ![Static Badge](https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)                                                                                  |
+| **Deploy**    | ![Static Badge](https://img.shields.io/badge/AWS%20ACM-DD344C?style=for-the-badge&logo=amazoniam&logoColor=white) ![Static Badge](https://img.shields.io/badge/AWS%20Route%2053-8C4FFF?style=for-the-badge&logo=amazonroute53&logoColor=white) ![Static Badge](https://img.shields.io/badge/AWS%20CloudFront-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white) <br> ![Static Badge](https://img.shields.io/badge/AWS%20S3-569A31?style=for-the-badge&logo=amazon-s3&logoColor=white) ![Static Badge](https://img.shields.io/badge/AWS%20EC2-FF9900?style=for-the-badge&logo=amazon-ec2&logoColor=white) ![Static Badge](https://img.shields.io/badge/AWS%20RDS-527FFF?style=for-the-badge&logo=amazon-rds&logoColor=white) ![Static Badge](https://img.shields.io/badge/nginx-009639?style=for-the-badge&logo=nginx&logoColor=white) |
+| **Tools**     |                      [![Static Badge](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Co-Labor-Project/.github/) ![Static Badge](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white) ![Static Badge](https://img.shields.io/badge/slack-4A154B?style=for-the-badge&logo=slack&logoColor=white) [![Static Badge](https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white)](https://mixolydian-idea-627.notion.site/7d14829c5a3e4b84930b2c5a8b0c9838?pvs=4) [![Static Badge](https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/YddHONkDl0nqcbQVkUEVTa/%EA%B3%B5%EB%AA%A8%EC%A0%84?node-id=33-251&t=ocRWZPY412U61gb0-0)                       |
 
 ## 💻 상세 페이지
 
 ### 📍 메인 페이지
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Main%20Page.gif" width="100%" height="100%" />
-
-- Co-Labor 메인 페이지
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/Home.gif" width="100%" height="100%" />
 
 ### 📍 로그인 / 회원가입 페이지
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Login.gif" width="100%" height="100%" />
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/Login.gif" width="100%" height="100%" />
 
-- Co-Labor 로그인 및 일반 회원, 기업 회원 가입 페이지
+### 📍 기업 정보 페이지
 
-### 📍 기업 등록 페이지
-
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Company%20Registration.gif" width="100%" height="100%" />
-
-- 채용 공고를 게시하고자 하는 기업 회원이 본인의 소속 기업을 등록하는 페이지
-- 등록한 기업은 추후 관리자에 의해 승인
-
-### 📍 기업 상세 페이지
-
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Company%20Details.gif" width="100%" height="100%" />
-
-- Co-Labor에 등록된 기업들의 상세 정보, 채용 공고, 기업 리뷰 등을 확인 할 수 있는 페이지
-- 해당 기업의 전체 리뷰 통계와 각 리뷰별 세부 내용 확인 가능
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/EnterpriseInfo.gif" width="100%" height="100%" />
 
 ### 📍 채용 공고 페이지
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Recruitment%20Notice.gif" width="100%" height="100%" />
-
-- 기업 회원들이 게시한 기업 채용 공고를 확인 할 수 있는 페이지
-- 직군, 경력, 근무형태, 우대사항 등 세부 내용과 연관된 채용 공고 확인 가능
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/JobNotice.gif" width="100%" height="100%" />
 
 ### 📍 법률 챗봇 페이지
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Legal%20Chatbot.gif" width="100%" height="100%" />
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/LegalChat.gif" width="100%" height="100%" />
 
-- 근로계약, 비자 규정, 법적 권리와 의무 등에 관한 정보를 제공하며, 법적 문제 해결을 도움
-- 과거 대화 내용 확인 가능
+### 📍 지원 센터 페이지
 
-### 📍 외국인 근로자 지원 센터 페이지
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/Map.gif" width="100%" height="100%" />
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Foreign%20Worker%20Support%20Center.gif" width="100%" height="100%" />
+### 📍 검색
 
-- 사용자의 현재 위치를 기반으로 인근 외국인 근로자 지원 센터 및 병원 위치 및 정보 확인 가능
-- 각 센터 클릭시, 지도에서 해당 위치로 이동
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/Search.gif" width="100%" height="100%" />
 
-### 📍 일반 검색 페이지
+### 📍 다국어 번역
 
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/Search.gif" width="100%" height="100%" />
+<img src="https://github.com/Co-Labor-Project/.github/blob/main/gif/Translate.gif" width="100%" height="100%" />
 
-- 기업 정보, 채용 공고, 기업 리뷰 등을 키워드로 검색
+## 🔗 Repository
 
-### 📍 AI 검색 페이지
-
-<img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/gif/AI%20Search.gif" width="100%" height="100%" />
-
-- AI 모델을 활용하여 사용자 입력에 따라 관련성 높은 검색 결과를 빠르고 정확하게 제공
+- **Front-end** &nbsp;&nbsp;&nbsp;[FE-Repository](https://github.com/Co-Labor-Project/Co-Labor-FE)
+- **Back-end** &nbsp;&nbsp;&nbsp;&nbsp;[BE-Repository](https://github.com/Co-Labor-Project/Co-Labor-BE)
 
 ## 🧑‍💻 팀원 구성
 
 <div align="center">
 
-|                                                                                 **김도현**                                                                                 |                                                                            **김문기**                                                                             |                                                                            **정한울**                                                                             |                                                                            **조준화**                                                                             |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/kdhqwe1030_img.jpg" height=240 width=180> <br/> _[@kdhqwe1030](https://github.com/kdhqwe1030)_ | <img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/mk-isos_img.jpg" height=240 width=180> <br/> _[@mk-isos](https://github.com/mk-isos)_ | <img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/jho7535_img.jpg" height=240 width=180> <br/> _[@jho7535](https://github.com/jho7535)_ | <img src="https://github.com/Co-Labor-Project/demo-repository/blob/main/img/jjj5306_img.jpg" height=240 width=180> <br/> _[@jjj5306](https://github.com/jjj5306)_ |
+|                                                                               **김도현**                                                                               |                                                                          **김문기**                                                                           |                                                                          **정한울**                                                                           |                                                                          **조준화**                                                                           |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://github.com/Co-Labor-Project/.github/blob/main/profile/kdhqwe1030_img.jpg" height=240 width=180> <br/> _[@kdhqwe1030](https://github.com/kdhqwe1030)_ | <img src="https://github.com/Co-Labor-Project/.github/blob/main/profile/mk-isos_img.jpg" height=240 width=180> <br/> _[@mk-isos](https://github.com/mk-isos)_ | <img src="https://github.com/Co-Labor-Project/.github/blob/main/profile/jho7535_img.jpg" height=240 width=180> <br/> _[@jho7535](https://github.com/jho7535)_ | <img src="https://github.com/Co-Labor-Project/.github/blob/main/profile/jjj5306_img.jpg" height=240 width=180> <br/> _[@jjj5306](https://github.com/jjj5306)_ |
 
 </div>
-
-
-## 📋 제안서
-[Co-Labor_Proposal.pdf](https://github.com/user-attachments/files/16548393/Co-Labor_Proposal.pdf)
